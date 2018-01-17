@@ -28,9 +28,20 @@ include_once 'plantillas/navbar.inc.php';
             <p>
                 Por 
                 <a href="#">
-
+                   <span class="glyphicon glyphicon-user" aria-hidden="true"></span> <?php echo $autor->getNombre();?>
+                   
                 </a>
+                el
+                <?php echo $entrada->getFecha();?>
             </p>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-12">
+            <article class="text-justify">
+                <?php echo nl2br($entrada->getTexto()); ?>
+            </article>
         </div>
     </div>
 </div>

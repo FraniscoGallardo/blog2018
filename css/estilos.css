@@ -29,6 +29,7 @@ body{
     color: white !important;
 }
 #navbar li a:hover, #navbar li a:active{
+    
     color:  #1961d6 !important;
 }
 .dropdown-menu{
@@ -36,4 +37,16 @@ body{
 }
 .open > a {
     background-color:#2b2b2b !important;
+}
+
+.btn-primary{
+    background-color: 1961d6 !important;
+    border: none;
+}
+.btn-primary:hover{
+    background-color: #2b2b2b !important;
+}
+.contenido-articulo{
+    background-color: white;
+    padding: 2em;
 }
