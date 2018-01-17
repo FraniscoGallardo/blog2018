@@ -20,6 +20,5 @@ define("RUTA_LOGOUT",SERVIDOR."/logout");
 define("RUTA_CSS",SERVIDOR. "/css/");
 define("RUTA_JS",SERVIDOR. "/js/");
 
-nn
 
 ?>
