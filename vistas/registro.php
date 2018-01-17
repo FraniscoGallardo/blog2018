@@ -85,5 +85,5 @@ if (isset($_POST['enviar'])) {
     </div>
 </div>
 <?php
-include_once 'plantillas/documento-cierre.int.php';
+include_once 'plantillas/documento-cierre.inc.php';
 ?>

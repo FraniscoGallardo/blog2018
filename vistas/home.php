@@ -71,5 +71,5 @@ include_once 'app/EscritorEntradas.inc.php';
 </div>
 
 <?php
-include_once 'plantillas/documento-cierre.int.php';
+include_once 'plantillas/documento-cierre.inc.php';
 ?>
