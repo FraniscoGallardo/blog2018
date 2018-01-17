@@ -86,7 +86,7 @@ class RepositorioEntrada {
                 $sql = "SELECT * FROM entradas ORDER BY RAND() LIMIT $limite";
                 $sentencia = $conexion->prepare($sql);
                 $sentencia->execute();
-                $sentencia->fetchAll();
+               $resultado= $sentencia->fetchAll();
 
                 if (count($resultado)) {
                     foreach ($resultado as $fila) {

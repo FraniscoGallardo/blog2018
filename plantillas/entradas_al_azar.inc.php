@@ -9,7 +9,7 @@ include_once 'app/EscritorEntradas.inc.php';
     
     <?php
     for ($i = 0; $i < count($entradas_azar); $i++) {
-        $entrada_actual = $entrada[$i];
+        $entrada_actual = $entradas_azar[$i];
         ?>
 
         <div class="col-md-4">
@@ -19,7 +19,7 @@ include_once 'app/EscritorEntradas.inc.php';
                 </div>
                 <div class="panel-body">
                     <p>
-                        <?php echo EscritorEntradas::resumir_texto(nl2br($entrada_actual->getTexto)); ?>
+                        <?php echo EscritorEntradas::resumir_texto(nl2br($entrada_actual->getTexto())); ?>
                     </p>
                 </div>
             </div>
