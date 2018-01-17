@@ -18,7 +18,7 @@ include_once 'app/EscritorEntradas.inc.php';
                     <?php echo $entrada_actual->getTitulo(); ?>
                 </div>
                 <div class="panel-body">
-                    <p>
+                    <p class="text-justify">
                         <?php echo EscritorEntradas::resumir_texto(nl2br($entrada_actual->getTexto())); ?>
                     </p>
                 </div>
