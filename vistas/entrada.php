@@ -1,5 +1,4 @@
 <?php
-
 include_once 'app/config.inc.php';
 include_once 'app/Conexion.inc.php';
 
@@ -14,8 +13,28 @@ include_once 'app/RepositorioUsuario.inc.php';
 $titulo = $entrada->getTitulo();
 include_once 'plantillas/documento-declaracion.inc.php';
 include_once 'plantillas/navbar.inc.php';
+?>
+<div class="container contenido-articulo">
+    <div class ="row">
+        <div>
+            <h1>
+                <?php echo $entrada->getTitulo(); ?> 
+            </h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-12">
+            <p>
+                Por 
+                <a href="#">
 
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<?php
 include_once 'plantillas/documento-cierre.inc.php';
-
-
 ?>
