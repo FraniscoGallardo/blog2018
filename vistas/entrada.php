@@ -28,11 +28,11 @@ include_once 'plantillas/navbar.inc.php';
             <p>
                 Por 
                 <a href="#">
-                   <span class="glyphicon glyphicon-user" aria-hidden="true"></span> <?php echo $autor->getNombre();?>
-                   
+                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span> <?php echo $autor->getNombre(); ?>
+
                 </a>
                 el
-                <?php echo $entrada->getFecha();?>
+                <?php echo $entrada->getFecha(); ?>
             </p>
         </div>
     </div>
@@ -44,6 +44,11 @@ include_once 'plantillas/navbar.inc.php';
             </article>
         </div>
     </div>
+    <?php
+    include_once 'plantillas/entradas_al_azar.inc.php';
+    ?>
+    <br>
+    
 </div>
 
 <?php
