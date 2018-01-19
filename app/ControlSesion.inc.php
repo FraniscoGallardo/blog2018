@@ -12,7 +12,7 @@ class ControlSesion {
     }
 
     public static function cerrar_sesion() {
-        if (session_id == '') {
+        if (session_id() == '') {
             session_start();
         }
 
