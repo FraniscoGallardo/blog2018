@@ -52,6 +52,7 @@ if ($partes_ruta[0] == 'blog') {
 
             if ($entrada != null) {
                 $autor = RepositorioUsuario::obtener_usuario_por_id(Conexion::obtener_conexion(), $entrada->getAutor_id());
+                $comentarios = RepositorioComentario::obtener_cometarios(Conexion::obtener_conexion(), $entrada->getId());
                 $entradas_azar = RepositorioEntrada::obtener_entradas_alazar(Conexion::obtener_conexion(), 3);
                 
                 $ruta_elegida = 'vistas/entrada.php';

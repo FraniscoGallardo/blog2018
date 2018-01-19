@@ -48,7 +48,13 @@ include_once 'plantillas/navbar.inc.php';
     include_once 'plantillas/entradas_al_azar.inc.php';
     ?>
     <br>
-    
+    <?php
+        if(count($comentarios)>0){
+            include_once 'plantillas/comentario_entrada.inc.php';
+        }else{
+            echo '<p>Todavia no hay comentarios<p/>';
+        }
+    ?>
 </div>
 
 <?php
