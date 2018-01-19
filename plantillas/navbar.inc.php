@@ -19,11 +19,18 @@ $total_usuarioss = RepositorioUsuario::obtener_numero_usuarios(Conexion::obtener
             <a class="navbar-brand" href="<?php echo SERVIDOR ?>"> Sitios de Encuestas</a>
         </div>
         <div class="navbar-collapse collapse" id="navbar">
+            <?php 
+                if(!ControlSesion::sesion_inicada())
+                {
+                    ?>
             <ul class="nav navbar-nav">
                 <li><a href="<?php echo RUTA_ENTRADAS ?>"><i class="fa fa-inbox" aria-hidden="true"></i> Entradas</a></li>
                 <li><a href="<?php echo RUTA_FAVORITOS ?>"><span class=" glyphicon glyphicon-star" aria-hidden="true"></span> Favoritos</a></li>
                 <li><a href="<?php echo RUTA_AUTORES ?>"><span class=" glyphicon glyphicon-education" aria-hidden="true"></span> Autores</a></li>
             </ul>
+            <?php
+            }
+            ?>
             <ul class="nav navbar-nav  navbar-right">
                 <?php
                 if (ControlSesion::sesion_inicada()) {
@@ -34,33 +41,13 @@ $total_usuarioss = RepositorioUsuario::obtener_numero_usuarios(Conexion::obtener
                             <?php echo ' ' . $_SESSION['nombre_usuario']; ?>
                         </a>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"  aria-haspopup="true" aria-expanded="false">
-                            <span class=" glyphicon glyphicon-dashboard" aria-hidden="true"></span> Gestor <span class="caret"></span>
+                      <li>
+                        <a href="<?php echo RUTA_GESTOR?>">
+                            <span class=" glyphicon glyphicon-dashboard" aria-hidden="true"></span> Gestor
+                            
                         </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="#">
-                                    Entradas 
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Comentarios 
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Usuarios 
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Favoritos 
-                                </a>
-                            </li>
-                        </ul>
                     </li>
+                   
                     <li>
                         <a href="<?php echo RUTA_LOGOUT ?>">
                             <span class="glyphicon glyphicon-log-out" aria-hidden="true">Cerrar Sesion</span>

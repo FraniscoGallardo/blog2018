@@ -38,6 +38,10 @@ if ($partes_ruta[0] == 'blog') {
             case 'registro':
                 $ruta_elegida = 'vistas/registro.php';
                 break;
+             case 'gestor':
+                $ruta_elegida = 'vistas/gestor.php';
+                 $gestor_actual ='';
+                break;
             case 'relleno-dev':
                 $ruta_elegida = 'vistas/script-relleno.php';
         }
@@ -56,6 +60,22 @@ if ($partes_ruta[0] == 'blog') {
                 $entradas_azar = RepositorioEntrada::obtener_entradas_alazar(Conexion::obtener_conexion(), 3);
                 
                 $ruta_elegida = 'vistas/entrada.php';
+            }
+        }
+        if($partes_ruta[1] = 'gestor'){
+            switch ($partes_ruta[2]){
+                case 'entradas':
+                    $gestor_actual = 'entradas';
+                    $ruta_elegida = 'vistas/gestor.php';
+                    break;
+                case 'comentarios':
+                    $gestor_actual ='comentarios';
+                    $ruta_elegida = 'vistas/gestor.php';
+                    break;
+                case 'favoritos':
+                    $gestor_actual = 'favoritos';
+                    $ruta_elegida = 'vistas/gestor.php';
+                    break;
             }
         }
     }

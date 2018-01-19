@@ -50,3 +50,9 @@ body{
     background-color: white;
     padding: 2em;
 }
+.sidebar{
+    background-color: white; 
+    margin-top: -5em;
+    padding-top: 5em;
+    padding-bottom: 1em;
+}
