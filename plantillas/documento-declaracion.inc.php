@@ -19,6 +19,7 @@ Conexion::cerrar_conexion();
         echo "<title>$titulo</title>";
         ?>
         <link href="<?PHP echo RUTA_CSS?>bootstrap.min.css" rel="stylesheet">
+        <link href="<?PHP echo RUTA_CSS?>font-awesome.min.css" rel="stylesheet">
         <link href="<?PHP echo RUTA_CSS?>estilos.css" rel="stylesheet">
 
 
