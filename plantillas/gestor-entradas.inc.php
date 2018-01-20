@@ -16,6 +16,7 @@
                     <tr>
                         <th>Fecha</th>
                         <th>Título</th>
+                        <th>Estado</th>
                         <th>Comentarios</th>
                         <th>Acciones</th>                  
                     </tr>
