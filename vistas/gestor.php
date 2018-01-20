@@ -14,7 +14,7 @@ switch ($gestor_actual) {
         include_once 'plantillas/gestor-generico.inc.php';
         break;
     case 'entradas':
-        $array_entradas = RepositorioEntrada::obtener_todas_por_fecha_desendiente(Conexion::obtener_conexion(),$_SESSION['id_usuario']);
+        $array_entradas = RepositorioEntrada::obtener_entradas_usuario_fecha_descedente(Conexion::obtener_conexion(),$_SESSION['id_usuario']);
         include_once 'plantillas/gestor-entradas.inc.php';
         break;
     case 'comentarios':
