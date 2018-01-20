@@ -43,7 +43,7 @@ for ($comentarios = 0; $comentarios < 100; $comentarios++) {
 }
 
 function sa($longitud) {
-    $caracteres = '0123456789abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
+    $caracteres = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $numero_caracteres = strlen($caracteres);
     $string_aleatorio = '';
 
