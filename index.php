@@ -44,6 +44,10 @@ if ($partes_ruta[0] == 'blog') {
                 break;
             case 'relleno-dev':
                 $ruta_elegida = 'vistas/script-relleno.php';
+                break;
+            case 'nueva-entrada':
+                $ruta_elegida = 'vistas/nueva-entrda.php';
+                break;;
         }
     } elseif (count($partes_ruta) == 3) {
         if ($partes_ruta[1] == 'registro-correcto') {

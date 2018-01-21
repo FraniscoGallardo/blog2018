@@ -2,8 +2,9 @@
     <div class="col-md-12">
         <h2>Gestion de entradas</h2>
         <br>
+        <a href="<?php echo RUTA_NUEVA_ENTRADA  ?>" class="btn btn-lg btn-primary" role="button" id="boton-nueva-entrada">Crear entrada</a>
         <br>
-
+        <br>
     </div>
 </div>
 <div class="row parte-gestor-entradas">
@@ -32,7 +33,10 @@
                             <td><?php echo $entrada_actual->getTitulo();?></td>
                             <td><?php echo $entrada_actual->getActiva();?></td>
                             <td><?php echo $comentarios_entrada_actual; ?></td>
-                            <td> Aqui van las acciones</td>
+                            <td>
+                                <button type="button" class="btn btn-default btn-xs">Editar</button>
+                                <button type="button" class="btn btn-default btn-xs">Editar</button>
+                            </td>
                         <tr/>
                             <?php
                         }
