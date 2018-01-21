@@ -10,9 +10,9 @@ include_once 'app/EscritorEntradas.inc.php';
 
 <div class="container">
     <div class="jumbotron">
-        <h1>Sito de Encuestas</h1>
+        <h1>Blog</h1>
         <p>
-            Evaluacion de Encuesas Medicas
+            Blog de aprendizaje
         </p>
     </div>
     <div class="container">
