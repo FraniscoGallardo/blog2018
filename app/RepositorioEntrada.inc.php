@@ -176,13 +176,28 @@ class RepositorioEntrada {
         }
         return $entradas_obtenidas;
     }
+    
+    
 
-    /*
-      SELECT a.id, a.autor_id, a.url, a.texto, a.fecha, a.activa, COUNT(b.id) AS 'cantidad_comentarios'
-      FROM entradas a
-      LEFT OUTER JOIN comentarios b ON a.id =  b.entrada_id
-      WHERE a.autor_id=0
-      GROUP by a.id
-      ORDER BY a.fecha DESC
-     */
+   public static function titulo_existe($conexion,$titulo){
+       $titulo_existe =true;
+       if(isset($conexion)){
+           try{
+               $sql = "SELECT * FROM entradass WHERE titulo =:titulo";
+               $sentencia=$conexion->prepare($sql);
+               $sentencia=bindParam(':titulo',$titulo,PDO::PARAM_STR);
+                $sentencia->execute();
+                $resutlado = $sentencia->fetchAll();
+                
+                if(count($resultado)){
+                 $titulo_existe =true;    
+                }else{
+                    $titulo_existe =false;
+                }
+           } catch (PDOException $ex) {
+               print 'ERROR' . $ex->getMessage();
+           }
+       }
+       return $titulo_existe;
+   }
 }
