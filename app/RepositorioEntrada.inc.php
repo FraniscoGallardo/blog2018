@@ -183,13 +183,13 @@ class RepositorioEntrada {
        $titulo_existe =true;
        if(isset($conexion)){
            try{
-               $sql = "SELECT * FROM entradass WHERE titulo =:titulo";
+               $sql = "SELECT * FROM entradas WHERE titulo =:titulo";
                $sentencia=$conexion->prepare($sql);
-               $sentencia=bindParam(':titulo',$titulo,PDO::PARAM_STR);
+               $sentencia->bindParam(':titulo',$titulo,PDO::PARAM_STR);
                 $sentencia->execute();
                 $resutlado = $sentencia->fetchAll();
                 
-                if(count($resultado)){
+                if(count($resutlado)){
                  $titulo_existe =true;    
                 }else{
                     $titulo_existe =false;
@@ -205,13 +205,13 @@ class RepositorioEntrada {
        $url_existe =true;
        if(isset($conexion)){
            try{
-               $sql = "SELECT * FROM entradass WHERE url =:url";
+               $sql = "SELECT * FROM entradas WHERE url =:url";
                $sentencia=$conexion->prepare($sql);
-               $sentencia=bindParam(':url',$url,PDO::PARAM_STR);
+               $sentencia->bindParam(':url',$url,PDO::PARAM_STR);
                 $sentencia->execute();
                 $resutlado = $sentencia->fetchAll();
                 
-                if(count($resultado)){
+                if(count($resutlado)){
                  $url_existe =true;    
                 }else{
                     $url_existe =false;

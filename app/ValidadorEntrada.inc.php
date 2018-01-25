@@ -22,7 +22,7 @@ class ValidadorEntrada {
 
         $this->error_titulo = $this->validar_titulo($conexion, $titulo);
         $this->error_url = $this->validar_url($conexion, $titulo);
-        $this->error_texto = $this->validar_texto($texti);
+        $this->error_texto = $this->validar_texto($conexion,$texto);
     }
 
     private function variable_iniciada($variable) {
@@ -50,7 +50,7 @@ class ValidadorEntrada {
     }
 
     private function validar_url($conexion, $url) {
-        if (!$this->variable_inicada($url)) {
+        if (!$this->variable_iniciada($url)) {
             return "Debes insertar una URL";
         } else {
             $this->url = $url;
@@ -59,7 +59,7 @@ class ValidadorEntrada {
             return "La URL no puede contener espacios";
         }
 
-        if (RepositorioEntrada::url_existe($conexion, url)) {
+        if (RepositorioEntrada::url_existe($conexion, $url)) {
             return "Ya existe otro articulo con la misma URL, elige una diferente.";
         }
     }
@@ -104,24 +104,24 @@ class ValidadorEntrada {
 
     public function mostrar_error_titulo() {
         if (!$this->error_texto != "") {
-            echo $this->aviso_inico . $error_titulo . $this->aviso_cierre;
+            echo $this->aviso_inico . $this->error_titulo . $this->aviso_cierre;
         }
     }
 
     public function mostrar_error_texto() {
         if (!$this->error_texto != "") {
-            echo $this->aviso_inico . $error_titulo . $this->aviso_cierre;
+            echo $this->aviso_inico . $this->error_titulo . $this->aviso_cierre;
         }
     }
 
     public function mostrar_error_url() {
         if (!$this->error_texto != "") {
-            echo $this->aviso_inico . $error_titulo . $this->aviso_cierre;
+            echo $this->aviso_inico . $this->error_titulo . $this->aviso_cierre;
         }
     }
 
     public function entrada_valida() {
-        if ($this->error_titulo == "" && error_url == "" && $this->error_texto == "") {
+        if ($this->error_titulo == "" && $this->error_url == "" && $this->error_texto == "") {
             return true;
         } else {
             return false;
